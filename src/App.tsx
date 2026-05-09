@@ -951,10 +951,12 @@ const BenefitsSection = () => {
 
             {/* HUGE BACKGROUND WORD */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+
                 <span
                     className="
-                        text-[22vw]
-                        md:text-[18vw]
+                        text-[42vw]
+                        md:text-[32vw]
+                        lg:text-[28vw]
                         font-serif
                         font-black
                         tracking-[-0.08em]
@@ -980,6 +982,7 @@ const BenefitsSection = () => {
                 />
             </div>
 
+            {/* Blurs */}
             <div className="absolute top-0 left-0 w-[40rem] h-[40rem] bg-gold/10 blur-[140px] rounded-full" />
             <div className="absolute bottom-0 right-0 w-[35rem] h-[35rem] bg-[#d8c3b5]/20 blur-[120px] rounded-full" />
 
@@ -1048,6 +1051,7 @@ const BenefitsSection = () => {
 
                                 {/* Número */}
                                 <div className="w-24 h-24 rounded-full bg-[#faf7f2] border border-gold/10 flex items-center justify-center mx-auto mb-10 shadow-inner">
+
                                     <span className="font-serif text-4xl text-gold font-bold">
                                         {b.number}
                                     </span>
