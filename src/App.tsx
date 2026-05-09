@@ -326,7 +326,9 @@ const Hero = () => {
                 <motion.a 
                   whileHover={{ scale: 1.02, y: -5 }}
                   whileTap={{ scale: 0.98 }}
-                  href="#contato" 
+                  href="https://wa.me/5511999999999"
+                  target="_blank"
+                  rel="noopener noreferrer" 
                   className="w-full sm:w-auto px-16 py-8 bg-gold text-white text-[11px] font-black uppercase tracking-[0.4em] rounded-full shadow-[0_30px_60px_-12px_rgba(197,160,89,0.3)] hover:bg-luxury-black transition-all duration-500 flex items-center justify-center gap-5 group overflow-hidden relative"
                 >
                   <span className="relative z-10 transition-transform duration-500">Agendar Consulta</span>
