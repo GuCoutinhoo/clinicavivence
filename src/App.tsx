@@ -363,24 +363,42 @@ const Hero = () => {
                 </div>
                 
                 <div className="flex items-center gap-6">
-                  <div className="flex -space-x-4">
-                    {[1, 2, 3].map(i => (
-                      <motion.div 
-                        key={i} 
-                        whileHover={{ y: -8, zIndex: 10 }}
-                        className="w-14 h-14 rounded-full border-4 border-white overflow-hidden bg-nude-100 shadow-xl"
-                      >
-                        <img src={`https://i.pravatar.cc/150?u=${i+12}`} alt="Paciente" className="w-full h-full object-cover" />
-                      </motion.div>
-                    ))}
-                  </div>
-                  <div>
-                    <p className="text-[10px] uppercase font-black text-luxury-black tracking-[0.25em]">Padrão Ouro</p>
-                    <p className="text-sm font-medium text-luxury-black/40">Confiança máxima confirmada</p>
-                  </div>
-                </div>
+            <div className="flex -space-x-4">
+          
+              <motion.div
+                whileHover={{ y: -8, zIndex: 10 }}
+                className="w-14 h-14 rounded-full border-4 border-white overflow-hidden bg-nude-100 shadow-xl"
+              >
+                <img
+                  src="https://i.postimg.cc/MpHjpjpp/profissional-1.jpg"
+                  alt="Paciente"
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
-            </motion.div>
+          
+              <motion.div
+                whileHover={{ y: -8, zIndex: 10 }}
+                className="w-14 h-14 rounded-full border-4 border-white overflow-hidden bg-nude-100 shadow-xl"
+              >
+                <img
+                  src="https://i.postimg.cc/Qt8Djcjz/profissional-2.jpg"
+                  alt="Paciente"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+          
+              <motion.div
+                whileHover={{ y: -8, zIndex: 10 }}
+                className="w-14 h-14 rounded-full border-4 border-white overflow-hidden bg-nude-100 shadow-xl"
+              >
+                <img
+                  src="https://i.postimg.cc/kgy9zjm4/profissional-5.jpg"
+                  alt="Paciente"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              </div>
+            </div>
           </div>
 
           <motion.div
