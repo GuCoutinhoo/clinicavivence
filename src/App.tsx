@@ -100,7 +100,7 @@ const Header = () => {
             href="https://wa.me/5511999999999"
             target="_blank"
             rel="noopener noreferrer" 
-            className="hidden sm:inline-flex items-center px-8 py-3 bg-luxury-black text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-gold transition-all duration-500 premium-shadow group relative overflow-hidden"
+            className="hidden sm:inline-flex items-center px-8 py-3 bg-gold text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-luxury-black transition-all duration-500 premium-shadow group relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
             <span className="relative z-10">Agendar agora</span>
@@ -165,27 +165,82 @@ const Hero = () => {
 
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        {/* Soft Background Text - Giant Outline Style */}
+        {/* Soft Background Text - Giant Style */}
         <motion.div 
           initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 0.04, scale: 1 }}
-          transition={{ duration: 3 }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[45vw] font-serif font-black tracking-tighter whitespace-nowrap select-none text-transparent"
-          style={{ WebkitTextStroke: '1px #e5e7eb' }}
+          animate={{ opacity: 0.05, scale: 1 }}
+          transition={{ duration: 4 }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[35vw] font-serif font-black tracking-tighter whitespace-nowrap select-none text-gray-400"
         >
-          VIVENCE
+          VICENCE
         </motion.div>
 
-        {/* Dynamic Light Orbs */}
-        <div className="absolute top-[-10%] right-[-5%] w-[70vw] h-[70vw] bg-[radial-gradient(circle,rgba(197,160,89,0.1)_0%,transparent_70%)] rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[50vw] h-[50vw] bg-[radial-gradient(circle,rgba(216,180,180,0.08)_0%,transparent_70%)] rounded-full blur-[100px]" />
+        {/* Dynamic Light Orbs - Enhanced */}
+        <div className="absolute top-[-10%] right-[-5%] w-[70vw] h-[70vw] bg-[radial-gradient(circle,rgba(197,160,89,0.12)_0%,transparent_70%)] rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[50vw] h-[50vw] bg-[radial-gradient(circle,rgba(216,180,180,0.1)_0%,transparent_70%)] rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 left-1/4 w-[30vw] h-[30vw] bg-[radial-gradient(circle,rgba(197,160,89,0.05)_0%,transparent_60%)] rounded-full blur-[80px]" />
         
-        {/* Animated Geometry */}
+        {/* Animated Geometry & Abstract Lines - More Layers */}
         <motion.div 
           animate={{ rotate: 360 }}
           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] border border-gold/5 rounded-full"
         />
+        <motion.div 
+          animate={{ rotate: -360 }}
+          transition={{ duration: 90, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vw] border border-gold/3 rounded-full opacity-30"
+        />
+        <motion.div 
+          animate={{ rotate: 180 }}
+          transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] border border-gold/2 rounded-full opacity-20"
+        />
+
+        {/* Technical Anchor Points (+) */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-[15%] left-[20%] text-gold text-xl font-light">+</div>
+          <div className="absolute top-[35%] right-[25%] text-gold text-xl font-light">+</div>
+          <div className="absolute bottom-[20%] left-[40%] text-gold text-xl font-light">+</div>
+          <div className="absolute bottom-[40%] right-[15%] text-gold text-xl font-light">+</div>
+          
+          {/* Coordinates Labels */}
+          <div className="absolute top-32 right-32 text-[8px] font-mono tracking-widest text-gold rotate-90 origin-right">LAT 23.5881 / LONG 46.6816</div>
+          <div className="absolute bottom-32 left-32 text-[8px] font-mono tracking-widest text-gold -rotate-90 origin-left">VERIFICATION COMPLETED</div>
+        </div>
+
+        {/* Diagonal Decorative Lines */}
+        <div className="absolute top-0 right-0 w-1/2 h-full py-20 px-10 opacity-10">
+          <div className="w-full h-full border-l border-t border-gold rounded-tl-[10rem]" />
+        </div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 py-20 px-10 opacity-10">
+          <div className="w-full h-full border-r border-b border-gold rounded-br-[10rem]" />
+        </div>
+
+        {/* Floating Particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(6)].map((_, i) => (
+            <motion.div
+              key={i}
+              animate={{ 
+                y: [0, -100, 0],
+                x: [0, Math.random() * 50 - 25, 0],
+                opacity: [0, 0.2, 0]
+              }}
+              transition={{ 
+                duration: 10 + Math.random() * 10, 
+                repeat: Infinity, 
+                delay: i * 2,
+                ease: "easeInOut" 
+              }}
+              className="absolute w-1 h-1 bg-gold rounded-full"
+              style={{ 
+                top: `${Math.random() * 100}%`, 
+                left: `${Math.random() * 100}%` 
+              }}
+            />
+          ))}
+        </div>
 
         {/* Vertical Rail Text */}
         <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden 2xl:flex flex-col items-center gap-24 opacity-30">
@@ -272,7 +327,7 @@ const Hero = () => {
                   whileHover={{ scale: 1.02, y: -5 }}
                   whileTap={{ scale: 0.98 }}
                   href="#contato" 
-                  className="w-full sm:w-auto px-16 py-8 bg-luxury-black text-white text-[11px] font-black uppercase tracking-[0.4em] rounded-full shadow-[0_30px_60px_-12px_rgba(0,0,0,0.3)] hover:bg-gold transition-all duration-500 flex items-center justify-center gap-5 group overflow-hidden relative"
+                  className="w-full sm:w-auto px-16 py-8 bg-gold text-white text-[11px] font-black uppercase tracking-[0.4em] rounded-full shadow-[0_30px_60px_-12px_rgba(197,160,89,0.3)] hover:bg-luxury-black transition-all duration-500 flex items-center justify-center gap-5 group overflow-hidden relative"
                 >
                   <span className="relative z-10 transition-transform duration-500">Agendar Consulta</span>
                   <ArrowRight size={18} className="relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
@@ -533,9 +588,23 @@ const ProceduresSection = () => {
 
   return (
     <section id="procedimentos" className="py-32 bg-nude-50 relative overflow-hidden">
-      {/* Decorative background elements */}
+      {/* Enhanced Decorative background elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none" 
+             style={{ backgroundImage: 'radial-gradient(#c5a059 1.5px, transparent 1.5px)', backgroundSize: '40px 40px' }} />
       <div className="absolute top-40 -left-20 w-80 h-80 bg-gold/5 blur-[100px] rounded-full" />
       <div className="absolute bottom-40 -right-20 w-96 h-96 bg-rose/5 blur-[120px] rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140vw] h-[140vw] border border-gold/5 rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-0 w-full h-px bg-linear-to-r from-transparent via-gold/10 to-transparent pointer-events-none" />
+      
+      {/* Floating Keywords Content */}
+      <div className="absolute top-1/4 right-10 flex flex-col gap-2 items-end opacity-[0.1] hidden xl:flex uppercase tracking-[0.2em] font-black">
+        <span className="text-4xl font-serif text-gold">CIÊNCIA</span>
+        <div className="w-24 h-px bg-gold" />
+      </div>
+      <div className="absolute bottom-1/4 left-10 flex flex-col gap-2 items-start opacity-[0.1] hidden xl:flex uppercase tracking-[0.2em] font-black">
+        <div className="w-24 h-px bg-gold" />
+        <span className="text-4xl font-serif text-gold">ARTE</span>
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20 text-balance">
@@ -759,8 +828,15 @@ const BeforeAfterSection = () => {
 
 const ExperienceSection = () => {
   return (
-    <section id="clinica" className="py-24 bg-nude-50">
-      <div className="container mx-auto px-6">
+    <section id="clinica" className="py-24 bg-nude-50 relative overflow-hidden">
+      {/* Background Decor for Gallery */}
+      <div className="absolute top-0 right-10 w-px h-full bg-linear-to-b from-transparent via-gold/10 to-transparent" />
+      <div className="absolute bottom-10 left-0 w-1/2 h-px bg-linear-to-r from-transparent via-gold/10 to-transparent" />
+      <div className="absolute top-1/2 right-4 translate-y-[-50%] rotate-90 opacity-[0.05] pointer-events-none whitespace-nowrap">
+        <span className="text-[12vw] font-serif font-black uppercase tracking-[0.5em] text-gold">BOUTIQUE</span>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-xs uppercase tracking-[0.4em] font-bold text-gold">Nosso Espaço</span>
           <h2 className="text-4xl md:text-5xl font-serif mt-4">Uma experiência de <span className="italic">bem-estar</span></h2>
@@ -1009,6 +1085,10 @@ const ConversionSection = () => {
       {/* Background Ornaments */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-rose/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
+      
+      {/* Large Decorative Orbits */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vw] border border-gold/5 rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] border border-gold/3 rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
@@ -1110,6 +1190,10 @@ const FAQSection = () => {
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-linear-to-l from-white/20 to-transparent pointer-events-none" />
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 text-[15vw] font-serif font-black text-gold/3 select-none pointer-events-none whitespace-nowrap">CURATED</div>
+      
+      {/* Technical rings */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vw] border border-gold/10 rounded-full opacity-30 pointer-events-none" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -1201,8 +1285,13 @@ const FAQSection = () => {
 
 const LocationSection = () => {
   return (
-    <section id="contato" className="py-24 bg-nude-50">
-      <div className="container mx-auto px-6">
+    <section id="contato" className="py-24 bg-nude-50 relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+             style={{ backgroundImage: 'radial-gradient(#c5a059 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110vw] h-[110vw] border border-gold/5 rounded-full pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="bg-white rounded-[4rem] overflow-hidden premium-shadow border border-gold/10 flex flex-col lg:flex-row">
            <div className="flex-1 p-12 md:p-20">
               <span className="text-xs uppercase tracking-[0.4em] font-bold text-gold mb-6 block">Venha nos visitar</span>
