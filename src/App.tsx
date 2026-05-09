@@ -4,11 +4,11 @@
  */
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
 import { 
   Menu, X, Instagram, MessageCircle, MapPin, Phone, Clock, Star, 
   ChevronRight, CheckCircle2, ShieldCheck, Sparkles, User, 
-  ArrowRight, Heart, Award, Zap, Microscope, TrendingUp, Calendar, ChevronDown
+  ArrowRight, Heart, Award, Zap, Microscope, TrendingUp, Calendar, ChevronDown, Quote
 } from 'lucide-react';
 
 // --- Types ---
@@ -171,7 +171,7 @@ const Hero = () => {
           animate={{ opacity: 0.04, scale: 1 }}
           transition={{ duration: 3 }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[45vw] font-serif font-black tracking-tighter whitespace-nowrap select-none text-transparent"
-          style={{ WebkitTextStroke: '2px #c5a059' }}
+          style={{ WebkitTextStroke: '1px #e5e7eb' }}
         >
           VIVENCE
         </motion.div>
@@ -271,9 +271,7 @@ const Hero = () => {
                 <motion.a 
                   whileHover={{ scale: 1.02, y: -5 }}
                   whileTap={{ scale: 0.98 }}
-                  href="https://wa.me/5511999999999"
-                  target="_blank"
-                  rel="noopener noreferrer" 
+                  href="#contato" 
                   className="w-full sm:w-auto px-16 py-8 bg-luxury-black text-white text-[11px] font-black uppercase tracking-[0.4em] rounded-full shadow-[0_30px_60px_-12px_rgba(0,0,0,0.3)] hover:bg-gold transition-all duration-500 flex items-center justify-center gap-5 group overflow-hidden relative"
                 >
                   <span className="relative z-10 transition-transform duration-500">Agendar Consulta</span>
