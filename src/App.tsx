@@ -474,9 +474,9 @@ const Hero = () => {
                                         <p className="text-white text-sm font-bold tracking-tight">Elite Patient <br /><span className="text-white/40 text-[9px] font-normal uppercase tracking-[0.2em] mt-1 inline-block">Experience</span></p>
                                     </div>
                                 </motion.div>
-                            </motion.div>
-                    </div>
+                    </motion.div>
                 </div>
+            </div>
         </section>
     );
 };
