@@ -306,8 +306,8 @@ const Hero = () => {
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="text-[#d8b4b4] italic font-light lg:text-[5.5rem]"
-                  >
+                    className="text-[#cfa7a7] italic font-normal lg:text-[6.2rem] ml-2"
+                    >
                     Natural
                   </motion.span>
                 </div>
