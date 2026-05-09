@@ -160,7 +160,7 @@ const Hero = () => {
     return (
         <section id="inicio" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-white">
             {/* Cinematic Noise Texture Overlay */}
-            <div className="absolute inset-0 z-1 pointer-events-none opacity-[0.03] mix-blend-overlay"
+            <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] mix-blend-overlay"
                 style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
 
             {/* Background Decorative Elements */}
@@ -399,10 +399,12 @@ const Hero = () => {
                                         </motion.div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
+                        </motion.div>
+                    </div>
 
-                            <motion.div
-                                initial={{ opacity: 0, x: 60 }}
+                    <motion.div
+                        initial={{ opacity: 0, x: 60 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
                                 className="lg:col-span-5 relative"
@@ -1193,19 +1195,18 @@ const ConversionSection = () => {
 
                     </div >
                 </motion.div >
-            </div >
+            </div>
         </section >
     );
 };
 
 const FAQSection = () => {
     const faqs = [
-        { q: 'Os procedimentos são seguros?', a: 'Sim. Na Vivence Clinic, todos os nossos protocolos seguem normas internacionais de segurança, utilizando exclusivamente materiais de procedência premium e tecnologias de última geração aprovadas pelos órgãos reguladores.' },
-        { q: 'Preciso fazer avaliação antes de qualquer procedimento?', a: 'Com certeza. Valorizamos a individualidade de cada face e corpo. A consultoria estética inicial é o pilar onde mapeamos suas necessidades e desenhamos um plano de tratamento exclusivo para seus objetivos.' },
-        { q: 'Em quanto tempo vejo resultado?', a: 'O tempo de resposta varia conforme o protocolo. Procedimentos como preenchimentos e toxina botulínica apresentam resultados em poucos dias. Tratamentos regenerativos como bioestimuladores atingem seu pico de colágeno entre 30 a 90 dias.' },
-        { q: 'Os resultados são naturais?', a: 'Esta é a nossa assinatura. Trabalhamos com "Estética Preservativa", um conceito onde o foco é realçar seus melhores traços e suavizar imperfeições sem alterar sua identidade ou expressões naturais.' },
-        { q: 'Quais as formas de pagamento?', a: 'Oferecemos total flexibilidade. Aceitamos cartões de crédito em até 12x, PIX com condições especiais e planos de parcelamento personalizado para protocolos de longa duração.' },
-        { q: 'A clínica atende por agendamento?', a: 'Sim, visando garantir sua total privacidade, conforto e um atendimento sem pressas, trabalhamos exclusivamente com horários agendados de forma personalizada.' },
+        { q: 'Os procedimentos têm recuperação?', a: 'A maioria dos nossos protocolos é minimamente invasiva, permitindo que você retorne às suas atividades rapidamente. O tempo específico será detalhado durante sua avaliação personalizada.' },
+        { q: 'Como é feita a avaliação inicial?', a: 'Nossa avaliação é uma experiência completa: realizamos mapeamento facial digital, escuta ativa das suas expectativas e desenhamos um plano exclusivo respeitando sua naturalidade.' },
+        { q: 'Os resultados são naturais?', a: 'Absolutamente. Nossa filosofia é a estética preservativa. Buscamos revelar sua melhor versão sem alterar sua essência ou expressões únicas.' },
+        { q: 'Quais formas de pagamento aceitam?', a: 'Trabalhamos com diversas opções de pagamento, incluindo cartões de crédito, PIX e parcelamentos facilitados para protocolos combinados.' },
+        { q: 'A clínica atende apenas com horário marcado?', a: 'Sim, visando garantir sua total privacidade, conforto e um atendimento sem pressas, trabalhamos exclusivamente com horários agendados de forma personalizada.' },
     ];
 
     const [openIdx, setOpenIdx] = useState<number | null>(0);
@@ -1241,66 +1242,53 @@ const FAQSection = () => {
                                 Transparência e segurança são nossos pilares. Se sua dúvida não estiver aqui, nosso concierge está pronto para seu contato.
                             </p>
 
-                            <motion.div
-                                whileHover={{ y: -5 }}
-                                className="p-10 bg-white rounded-[3rem] premium-shadow border border-gold/10 relative overflow-hidden group"
+                            <motion.a
+                                whileHover={{ x: 10 }}
+                                href="#contato"
+                                className="inline-flex items-center gap-4 text-gold font-black uppercase tracking-[0.3em] text-xs border-b border-gold/30 pb-2 hover:border-gold transition-all"
                             >
-                                <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                                    <MessageCircle size={80} className="text-gold" />
-                                </div>
-                                <h4 className="font-serif text-2xl font-bold mb-4 relative z-10">Ainda com dúvidas?</h4>
-                                <p className="text-sm text-luxury-black/50 mb-8 relative z-10">Fale diretamente com uma de nossas especialistas agora mesmo via WhatsApp.</p>
-                                <a
-                                    href="https://wa.me/5500000000000"
-                                    target="_blank"
-                                    className="inline-flex items-center gap-3 text-gold text-xs font-black uppercase tracking-[0.3em] group/link"
-                                >
-                                    Consultar Especialista
-                                    <ArrowRight size={16} className="group-hover/link:translate-x-2 transition-transform" />
-                                </a>
-                            </motion.div>
+                                Falar com especialista <ArrowRight size={16} />
+                            </motion.a>
                         </motion.div>
                     </div>
 
-                    <div className="lg:col-span-7 space-y-5">
-                        {faqs.map((faq, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className={`rounded-[2rem] border transition-all duration-500 overflow-hidden ${openIdx === i ? 'bg-white border-gold/30 shadow-[0_20px_40px_rgba(197,160,89,0.1)]' : 'bg-white/40 border-gold/5 hover:border-gold/20'}`}
-                            >
-                                <button
-                                    onClick={() => setOpenIdx(openIdx === i ? null : i)}
-                                    className="w-full p-8 text-left flex justify-between items-center group"
+                    <div className="lg:col-span-7">
+                        <div className="flex flex-col gap-4">
+                            {faqs.map((faq, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className={`bg-white rounded-[2rem] border transition-all duration-500 overflow-hidden ${openIdx === i ? 'border-gold/30 shadow-[0_20px_50px_rgba(197,160,89,0.08)]' : 'border-transparent hover:border-gold/10'}`}
                                 >
-                                    <span className={`font-serif font-bold text-xl transition-colors duration-300 ${openIdx === i ? 'text-luxury-black' : 'text-luxury-black/70 group-hover:text-gold'}`}>
-                                        {faq.q}
-                                    </span>
-                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${openIdx === i ? 'bg-gold text-white rotate-180' : 'bg-gold/10 text-gold group-hover:bg-gold/20'}`}>
-                                        <ChevronDown size={18} />
-                                    </div>
-                                </button>
-                                <AnimatePresence>
-                                    {openIdx === i && (
-                                        <motion.div
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: 'auto', opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.4, ease: "easeInOut" }}
-                                        >
-                                            <div className="px-8 pb-8 pt-2 text-sm text-luxury-black/60 leading-relaxed font-light border-t border-gold/5 mx-8 mt-[-8px]">
-                                                <div className="pt-6">
-                                                    {faq.a}
+                                    <button
+                                        onClick={() => setOpenIdx(openIdx === i ? null : i)}
+                                        className="w-full px-8 py-6 flex items-center justify-between text-left group"
+                                    >
+                                        <span className="font-serif text-xl font-bold text-luxury-black group-hover:text-gold transition-colors">{faq.q}</span>
+                                        <div className={`w-10 h-10 rounded-full bg-nude-50 flex items-center justify-center text-gold transition-transform duration-300 ${openIdx === i ? 'rotate-180' : ''}`}>
+                                            <ChevronDown size={20} />
+                                        </div>
+                                    </button>
+                                    <AnimatePresence>
+                                        {openIdx === i && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <div className="px-8 pb-8 pt-0 text-luxury-black/50 leading-relaxed border-t border-gold/5">
+                                                    <p className="pt-6">{faq.a}</p>
                                                 </div>
-                                            </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </motion.div>
-                        ))}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1310,80 +1298,84 @@ const FAQSection = () => {
 
 const LocationSection = () => {
     return (
-        <section id="contato" className="py-24 bg-nude-50 relative overflow-hidden">
-            {/* Background Decor */}
-            <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(#c5a059 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110vw] h-[110vw] border border-gold/5 rounded-full pointer-events-none" />
+        <section id="contato" className="py-32 bg-luxury-black text-white relative overflow-hidden">
+            <div className="absolute inset-0 opacity-20">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(197,160,89,0.15)_0%,_transparent_70%)]" />
+            </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="bg-white rounded-[4rem] overflow-hidden premium-shadow border border-gold/10 flex flex-col lg:flex-row">
-                    <div className="flex-1 p-12 md:p-20">
-                        <span className="text-xs uppercase tracking-[0.4em] font-bold text-gold mb-6 block">Venha nos visitar</span>
-                        <h2 className="text-4xl md:text-5xl font-serif mb-12">Onde a <span className="italic">beleza</span> acontece</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <span className="text-gold text-xs font-bold uppercase tracking-[0.4em]">Visite a Vivence</span>
+                        <h2 className="text-5xl md:text-7xl font-serif mt-6 mb-12 leading-tight">
+                            Seu novo ritual de beleza começa aqui.
+                        </h2>
 
-                        <div className="space-y-10">
-                            <div className="flex items-start gap-6">
-                                <div className="w-12 h-12 bg-nude-100 rounded-2xl flex items-center justify-center text-gold shrink-0">
-                                    <MapPin size={24} />
-                                </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+                            <div className="flex items-start gap-4">
+                                <MapPin className="text-gold shrink-0" size={24} />
                                 <div>
-                                    <p className="font-serif text-xl font-bold mb-1">Endereço</p>
-                                    <p className="text-luxury-black/60 text-sm">Av. Brigadeiro Faria Lima, 4500 <br /> Itaim Bibi, São Paulo - SP</p>
+                                    <h4 className="font-bold uppercase tracking-widest text-xs mb-2">Endereço</h4>
+                                    <p className="text-white/50 text-sm leading-relaxed">Av. Brigadeiro Faria Lima, 3477<br />Itaim Bibi, São Paulo - SP</p>
                                 </div>
                             </div>
-
-                            <div className="flex items-start gap-6">
-                                <div className="w-12 h-12 bg-nude-100 rounded-2xl flex items-center justify-center text-gold shrink-0">
-                                    <Clock size={24} />
-                                </div>
+                            <div className="flex items-start gap-4">
+                                <Clock className="text-gold shrink-0" size={24} />
                                 <div>
-                                    <p className="font-serif text-xl font-bold mb-1">Horário de Atendimento</p>
-                                    <p className="text-luxury-black/60 text-sm">Segunda a Sexta: 08h às 20h <br /> Sábados: 09h às 14h</p>
+                                    <h4 className="font-bold uppercase tracking-widest text-xs mb-2">Horários</h4>
+                                    <p className="text-white/50 text-sm leading-relaxed">Segunda a Sexta: 09h às 20h<br />Sábado: 09h às 16h</p>
                                 </div>
                             </div>
-
-                            <div className="flex items-start gap-6">
-                                <div className="w-12 h-12 bg-nude-100 rounded-2xl flex items-center justify-center text-gold shrink-0">
-                                    <Phone size={24} />
-                                </div>
+                            <div className="flex items-start gap-4">
+                                <Phone className="text-gold shrink-0" size={24} />
                                 <div>
-                                    <p className="font-serif text-xl font-bold mb-1">Telefone / WhatsApp</p>
-                                    <p className="text-luxury-black/60 text-sm">+55 (11) 98888-7777</p>
+                                    <h4 className="font-bold uppercase tracking-widest text-xs mb-2">Telefone</h4>
+                                    <p className="text-white/50 text-sm leading-relaxed">(11) 99999-9999<br />contato@vivenceclinic.com.br</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4">
+                                <Instagram className="text-gold shrink-0" size={24} />
+                                <div>
+                                    <h4 className="font-bold uppercase tracking-widest text-xs mb-2">Social</h4>
+                                    <p className="text-white/50 text-sm leading-relaxed">@vivence.clinic<br />Acompanhe nossos resultados</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="mt-12 flex flex-col sm:flex-row gap-4">
-                            <a href="https://maps.google.com" target="_blank" className="flex-1 py-4 bg-luxury-black text-white text-xs font-bold uppercase tracking-widest text-center rounded-xl hover:bg-gold transition-colors">Como chegar</a>
-                            <a href="https://instagram.com" target="_blank" className="flex items-center justify-center w-full sm:w-14 h-14 bg-nude-100 text-gold rounded-xl hover:bg-gold hover:text-white transition-colors">
-                                <Instagram size={24} />
-                            </a>
-                        </div>
-                    </div>
-                    <div className="lg:w-[45%] h-[550px] lg:h-auto bg-nude-200 relative group overflow-hidden">
-                        <img
-                            referrerPolicy="no-referrer"
-                            src="https://i.postimg.cc/pdD0q7bg/localizacao-ilustrativa.png"
-                            alt="Localização Vivence"
-                            className="w-full h-full object-cover grayscale brightness-90 group-hover:scale-105 transition-transform duration-7000"
-                        />
-                        <div className="absolute inset-0 bg-linear-to-t from-luxury-black/60 via-transparent to-transparent" />
-                        <div className="absolute inset-0 bg-gold/5 mix-blend-overlay" />
+                        <a
+                            href="https://wa.me/5500000000000"
+                            target="_blank"
+                            className="inline-flex items-center gap-4 px-10 py-5 bg-gold text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-luxury-black transition-all duration-300 premium-shadow"
+                        >
+                            Agendar agora <MessageCircle size={18} />
+                        </a>
+                    </motion.div>
 
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <div className="relative">
-                                <div className="absolute inset-0 rounded-full bg-gold/40 animate-ping opacity-30 scale-150" />
-                                <div className="relative p-10 bg-white/95 backdrop-blur-md rounded-[3rem] shadow-2xl flex flex-col items-center border border-gold/20">
-                                    <div className="w-20 h-20 bg-gold/10 rounded-[1.5rem] flex items-center justify-center text-gold mb-4 border border-gold/10">
-                                        <MapPin size={40} />
-                                    </div>
-                                    <span className="font-serif font-black text-2xl text-luxury-black">Vivence Clinic</span>
-                                    <span className="text-[11px] uppercase tracking-[0.4em] font-black text-gold mt-3">Unidade Jardins</span>
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="relative"
+                    >
+                        <div className="aspect-square rounded-[4rem] overflow-hidden border border-white/10 shadow-2xl relative group bg-white/5">
+                            {/* Map Placeholder */}
+                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1474&auto=format&fit=crop')] bg-cover bg-center opacity-50 grayscale group-hover:scale-105 transition-transform duration-1000" />
+                            <div className="absolute inset-0 bg-luxury-black/40" />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-32 h-32 bg-gold rounded-full flex items-center justify-center animate-pulse shadow-[0_0_50px_rgba(197,160,89,0.5)]">
+                                    <MapPin size={48} className="text-white" />
                                 </div>
                             </div>
+                            <div className="absolute bottom-10 left-10 right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-[2rem]">
+                                <p className="text-xs uppercase tracking-[0.3em] text-gold mb-2 font-bold">Localização Premium</p>
+                                <h4 className="font-serif text-2xl">Itaim Bibi, São Paulo</h4>
+                            </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
@@ -1392,82 +1384,27 @@ const LocationSection = () => {
 
 const Footer = () => {
     return (
-        <footer className="bg-luxury-black text-white pt-24 pb-12">
+        <footer className="bg-[#0a0a0a] text-white py-16 border-t border-white/5">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
-                    <div className="lg:col-span-1">
-                        <div className="flex items-center gap-2 mb-8">
-                            <span className="font-serif text-3xl font-bold tracking-widest">VIVENCE</span>
-                            <div className="w-2 h-2 rounded-full bg-gold" />
-                        </div>
-                        <p className="text-white/50 text-sm leading-relaxed mb-8">
-                            Uma clínica concebida para unir a mais alta tecnologia médica ao luxo e personalização que você merece. Sua beleza, nossa ciência.
-                        </p>
-                        <div className="flex gap-4">
-                            {[Instagram, MessageCircle, Heart].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all">
-                                    <Icon size={18} />
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-
+                <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                     <div>
-                        <h5 className="font-serif text-xl font-bold mb-8">Links Rápidos</h5>
-                        <ul className="space-y-4 text-sm text-white/50">
-                            {['Início', 'Procedimentos', 'Resultados', 'Nossa Clínica', 'Dúvidas'].map((item, i) => (
-                                <li key={i}><a href="#" className="hover:text-gold transition-colors">{item}</a></li>
-                            ))}
-                        </ul>
+                        <h3 className="font-serif text-3xl font-bold tracking-[0.2em] mb-2">VIVENCE</h3>
+                        <p className="text-[10px] uppercase tracking-[0.4em] text-gold">Boutique Aesthetic Clinic</p>
                     </div>
-
-                    <div>
-                        <h5 className="font-serif text-xl font-bold mb-8">Procedimentos</h5>
-                        <ul className="space-y-4 text-sm text-white/50">
-                            {['Harmonização Facial', 'Botox Premium', 'Bioestimuladores', 'Lasers de Alta Linha', 'Peelings'].map((item, i) => (
-                                <li key={i}><a href="#" className="hover:text-gold transition-colors">{item}</a></li>
-                            ))}
-                        </ul>
+                    <div className="flex gap-6">
+                        <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-gold hover:border-gold transition-all"><Instagram size={20} /></a>
+                        <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-gold hover:border-gold transition-all"><MessageCircle size={20} /></a>
                     </div>
-
-                    <div>
-                        <h5 className="font-serif text-xl font-bold mb-8">Contato</h5>
-                        <ul className="space-y-6 text-sm text-white/50">
-                            <li className="flex items-start gap-3">
-                                <MapPin size={18} className="text-gold shrink-0" />
-                                <span>Av. Faria Lima, 4500 - Itaim Bibi, São Paulo - SP</span>
-                            </li>
-                            <li className="flex items-center gap-3">
-                                <Phone size={18} className="text-gold shrink-0" />
-                                <span>+55 (11) 98888-7777</span>
-                            </li>
-                            <li className="flex items-center gap-3">
-                                <Clock size={18} className="text-gold shrink-0" />
-                                <span>Seg-Sex: 08h - 20h | Sáb: 09h - 14h</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-[10px] uppercase font-bold tracking-widest text-white/30">
-                        © 2024 Vivence Clinic - Estética de Luxo. Todos os direitos reservados.
-                    </p>
-                    <div className="flex gap-8 text-[10px] uppercase font-bold tracking-widest text-white/30">
-                        <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-                        <a href="#" className="hover:text-white transition-colors">Privacidade</a>
-                    </div>
+                    <p className="text-xs text-white/30">© 2024 Vivence Clinic. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>
     );
 };
 
-// --- App Root ---
-
 export default function App() {
     return (
-        <div className="bg-nude-50">
+        <div className="min-h-screen bg-white text-luxury-black selection:bg-gold selection:text-white font-sans">
             <ScrollProgress />
             <Header />
             <main>
