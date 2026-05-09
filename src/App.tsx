@@ -290,12 +290,12 @@ const Hero = () => {
                 >
                   A Arte da
                 </motion.span>
-                <div className="flex items-baseline gap-2 whitespace-nowrap">
+                <div className="flex items-baseline gap-x-0 whitespace-nowrap">
                   <motion.span 
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="text-gradient-gold italic font-medium relative"
+                    className="text-gradient-gold italic font-medium relative lg:text-[8rem]"
                   >
                     Perfeição
                     <svg className="absolute -bottom-4 left-0 w-full h-3 text-gold/20" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -306,7 +306,7 @@ const Hero = () => {
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="text-[#d8b4b4] italic font-light lg:text-[6rem]"
+                    className="text-[#d8b4b4] italic font-light lg:text-[5.5rem]"
                   >
                     Natural
                   </motion.span>
