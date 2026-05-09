@@ -290,7 +290,7 @@ const Hero = () => {
                 >
                   A Arte da
                 </motion.span>
-                <div className="flex flex-wrap gap-x-6 items-baseline">
+                <div className="flex items-baseline gap-4 whitespace-nowrap">
                   <motion.span 
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
