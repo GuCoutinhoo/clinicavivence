@@ -290,7 +290,7 @@ const Hero = () => {
                 >
                   A Arte da
                 </motion.span>
-                <div className="flex items-baseline gap-4 whitespace-nowrap">
+                <div className="flex items-baseline gap-2 whitespace-nowrap">
                   <motion.span 
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -306,7 +306,7 @@ const Hero = () => {
                     initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.8 }}
-                    className="text-[#d8b4b4] italic font-light lg:text-[9rem]"
+                    className="text-[#d8b4b4] italic font-light lg:text-[6rem]"
                   >
                     Natural
                   </motion.span>
