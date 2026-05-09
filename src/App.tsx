@@ -158,7 +158,7 @@ const Header = () => {
 
 const Hero = () => {
     return (
-        <section id="inicio" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-white">
+        <section id="inicio" className="relative min-h-[88vh] flex items-center pt-28 pb-14 overflow-hidden bg-white">
             {/* Cinematic Noise Texture Overlay */}
             <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] mix-blend-overlay"
                 style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
@@ -281,7 +281,7 @@ const Hero = () => {
                                 </motion.div>
                             </div>
 
-                            <h1 className="text-7xl md:text-8xl lg:text-[10rem] font-serif leading-[0.9] mb-12 text-luxury-black tracking-tight">
+                            <h1 className="text-6xl md:text-7xl lg:text-[7.5rem] font-serif leading-[0.9] mb-8 text-luxury-black tracking-tight">
                                 <motion.span
                                     initial={{ opacity: 0, y: 40 }}
                                     animate={{ opacity: 1, y: 0 }}
@@ -295,7 +295,7 @@ const Hero = () => {
                                         initial={{ opacity: 0, x: -30 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 0.6 }}
-                                        className="text-gradient-gold italic font-medium relative lg:text-[8rem]"
+                                        className="text-gradient-gold italic font-medium relative lg:text-[6rem]"
                                     >
                                         Perfeição
                                         <svg className="absolute -bottom-4 left-0 w-full h-3 text-gold/20" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -306,7 +306,7 @@ const Hero = () => {
                                         initial={{ opacity: 0, x: 30 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 0.8 }}
-                                        className="text-[#cfa7a7] italic font-normal lg:text-[6.2rem] ml-2"
+                                        className="text-[#cfa7a7] italic font-normal lg:text-[4.8rem] ml-2"
                                     >
                                         Natural
                                     </motion.span>
@@ -317,19 +317,19 @@ const Hero = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 1 }}
-                                className="text-xl md:text-2xl text-luxury-black/40 mb-16 max-w-xl leading-relaxed font-light"
+                                className="text-lg md:text-xl text-luxury-black/40 mb-10 max-w-xl leading-relaxed font-light"
                             >
                                 Onde a <span className="text-luxury-black font-semibold">ciência de ponta</span> encontra a estética artística. Protocolos autorais desenhados para revelar sua essência mais radiante.
                             </motion.p>
 
-                            <div className="flex flex-col sm:flex-row items-center gap-8 mb-24">
+                            <div className="flex flex-col sm:flex-row items-center gap-8 mb-14">
                                 <motion.a
                                     whileHover={{ scale: 1.02, y: -5 }}
                                     whileTap={{ scale: 0.98 }}
                                     href="https://wa.me/5511999999999"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full sm:w-auto px-16 py-8 bg-gold text-white text-[11px] font-black uppercase tracking-[0.4em] rounded-full shadow-[0_30px_60px_-12px_rgba(197,160,89,0.3)] hover:bg-luxury-black transition-all duration-500 flex items-center justify-center gap-5 group overflow-hidden relative"
+                                    className="w-full sm:w-auto px-12 py-6 bg-gold text-white text-[11px] font-black uppercase tracking-[0.4em] rounded-full shadow-[0_30px_60px_-12px_rgba(197,160,89,0.3)] hover:bg-luxury-black transition-all duration-500 flex items-center justify-center gap-5 group overflow-hidden relative"
                                 >
                                     <span className="relative z-10 transition-transform duration-500">Agendar Consulta</span>
                                     <ArrowRight size={18} className="relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
@@ -338,7 +338,7 @@ const Hero = () => {
                                 <motion.a
                                     whileHover={{ scale: 1.02, y: -5 }}
                                     href="#procedimentos"
-                                    className="w-full sm:w-auto px-16 py-8 border border-gold/30 text-luxury-black text-[11px] font-black uppercase tracking-[0.4em] rounded-full hover:border-gold hover:bg-gold/5 transition-all duration-500 flex items-center justify-center backdrop-blur-md bg-white/10 group"
+                                    className="w-full sm:w-auto px-12 py-6 border border-gold/30 text-luxury-black text-[11px] font-black uppercase tracking-[0.4em] rounded-full hover:border-gold hover:bg-gold/5 transition-all duration-500 flex items-center justify-center backdrop-blur-md bg-white/10 group"
                                 >
                                     Procedimentos
                                     <ChevronRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -405,75 +405,75 @@ const Hero = () => {
 
                     <motion.div
                         initial={{ opacity: 0, x: 60 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-                        className="lg:col-span-5 relative"
-                    >
-                        <div className="relative z-10 group">
-                            <motion.div
-                                animate={{ rotate: 360 }}
-                                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                                className="absolute inset-[-60px] border border-gold/10 rounded-full -z-10"
-                            />
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+                                className="lg:col-span-5 relative"
+                            >
+                                <div className="relative z-10 group">
+                                    <motion.div
+                                        animate={{ rotate: 360 }}
+                                        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                                        className="absolute inset-[-60px] border border-gold/10 rounded-full -z-10"
+                                    />
 
-                            <div className="relative rounded-[5rem] overflow-hidden aspect-[4/5.5] shadow-[0_60px_120px_-20px_rgba(197,160,89,0.2)] border-[15px] border-white backdrop-blur-3xl">
-                                <motion.img
-                                    initial={{ scale: 1.15 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ duration: 2.5 }}
-                                    referrerPolicy="no-referrer"
-                                    src="https://i.postimg.cc/G2RG6TKR/hero-1.png"
-                                    alt="Vivence Clinic"
-                                    className="w-full h-full object-cover object-[65%_center] grayscale-[0.05] group-hover:scale-105 transition-transform duration-[4000ms]"
-                                />
+                                    <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5.1] shadow-[0_45px_90px_-20px_rgba(197,160,89,0.18)] border-[12px] border-white backdrop-blur-3xl">
+                                        <motion.img
+                                            initial={{ scale: 1.15 }}
+                                            animate={{ scale: 1 }}
+                                            transition={{ duration: 2.5 }}
+                                            referrerPolicy="no-referrer"
+                                            src="https://i.postimg.cc/G2RG6TKR/hero-1.png"
+                                            alt="Vivence Clinic"
+                                            className="w-full h-full object-cover object-[65%_center] grayscale-[0.05] group-hover:scale-105 transition-transform duration-[4000ms]"
+                                        />
 
-                                <div className="absolute top-10 right-10 w-24 h-24 bg-white/10 backdrop-blur-2xl rounded-full border border-white/20 flex items-center justify-center animate-spin-slow">
-                                    <div className="text-white text-[8px] font-black tracking-widest text-center">
-                                        BELEZA<br />REAL<br />EST. 2017
+                                        <div className="absolute top-10 right-10 w-24 h-24 bg-white/10 backdrop-blur-2xl rounded-full border border-white/20 flex items-center justify-center animate-spin-slow">
+                                            <div className="text-white text-[8px] font-black tracking-widest text-center">
+                                                BELEZA<br />REAL<br />EST. 2017
+                                            </div>
+                                        </div>
+
+                                        <div className="absolute bottom-12 left-8 right-8 p-10 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[3.5rem] shadow-2xl">
+                                            <div className="flex items-center gap-6">
+                                                <div className="w-16 h-16 bg-gold/20 rounded-3xl flex items-center justify-center text-gold border border-gold/20">
+                                                    <Sparkles size={32} />
+                                                </div>
+                                                <div>
+                                                    <p className="text-[10px] uppercase font-black tracking-[0.3em] text-white/80 mb-1">Tecnologia 2024</p>
+                                                    <p className="font-serif text-2xl text-white font-medium">Inovação Estética</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className="absolute bottom-12 left-8 right-8 p-10 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[3.5rem] shadow-2xl">
-                                    <div className="flex items-center gap-6">
-                                        <div className="w-16 h-16 bg-gold/20 rounded-3xl flex items-center justify-center text-gold border border-gold/20">
-                                            <Sparkles size={32} />
+                                <motion.div
+                                    animate={{ y: [0, -25, 0], x: [0, 10, 0] }}
+                                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                                    className="absolute -top-16 -right-16 z-20"
+                                >
+                                    <div className="bg-white/95 backdrop-blur-xl shadow-2xl px-12 py-10 rounded-[3.5rem] border border-gold/10 flex flex-col items-center">
+                                        <div className="w-16 h-16 bg-gold/10 rounded-3xl flex items-center justify-center text-gold mb-4">
+                                            <ShieldCheck size={36} />
                                         </div>
-                                        <div>
-                                            <p className="text-[10px] uppercase font-black tracking-[0.3em] text-white/80 mb-1">Tecnologia 2024</p>
-                                            <p className="font-serif text-2xl text-white font-medium">Inovação Estética</p>
-                                        </div>
+                                        <p className="text-[9px] uppercase font-black tracking-[0.5em] text-luxury-black/30 mb-1">Certificação</p>
+                                        <p className="font-serif font-black text-2xl text-luxury-black">ISO 9001</p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </motion.div>
 
-                        <motion.div
-                            animate={{ y: [0, -25, 0], x: [0, 10, 0] }}
-                            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -top-16 -right-16 z-20"
-                        >
-                            <div className="bg-white/95 backdrop-blur-xl shadow-2xl px-12 py-10 rounded-[3.5rem] border border-gold/10 flex flex-col items-center">
-                                <div className="w-16 h-16 bg-gold/10 rounded-3xl flex items-center justify-center text-gold mb-4">
-                                    <ShieldCheck size={36} />
-                                </div>
-                                <p className="text-[9px] uppercase font-black tracking-[0.5em] text-luxury-black/30 mb-1">Certificação</p>
-                                <p className="font-serif font-black text-2xl text-luxury-black">ISO 9001</p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            animate={{ y: [0, 25, 0], x: [0, -10, 0] }}
-                            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            className="absolute -bottom-12 -left-16 z-20"
-                        >
-                            <div className="bg-luxury-black shadow-[0_40px_80px_rgba(0,0,0,0.4)] px-12 py-8 rounded-[3.5rem] border border-white/10 flex items-center gap-6 group">
-                                <div className="flex gap-1 text-gold">
-                                    {[1, 2, 3, 4, 5].map(i => <Star key={i} size={10} fill="currentColor" />)}
-                                </div>
-                                <div className="h-10 w-px bg-white/20" />
-                                <p className="text-white text-sm font-bold tracking-tight">Elite Patient <br /><span className="text-white/40 text-[9px] font-normal uppercase tracking-[0.2em] mt-1 inline-block">Experience</span></p>
-                            </div>
-                        </motion.div>
+                                <motion.div
+                                    animate={{ y: [0, 25, 0], x: [0, -10, 0] }}
+                                    transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                                    className="absolute -bottom-12 -left-16 z-20"
+                                >
+                                    <div className="bg-luxury-black shadow-[0_40px_80px_rgba(0,0,0,0.4)] px-12 py-8 rounded-[3.5rem] border border-white/10 flex items-center gap-6 group">
+                                        <div className="flex gap-1 text-gold">
+                                            {[1, 2, 3, 4, 5].map(i => <Star key={i} size={10} fill="currentColor" />)}
+                                        </div>
+                                        <div className="h-10 w-px bg-white/20" />
+                                        <p className="text-white text-sm font-bold tracking-tight">Elite Patient <br /><span className="text-white/40 text-[9px] font-normal uppercase tracking-[0.2em] mt-1 inline-block">Experience</span></p>
+                                    </div>
+                                </motion.div>
                     </motion.div>
                 </div>
             </div>
@@ -948,49 +948,29 @@ const BenefitsSection = () => {
             id="sobre"
             className="relative py-32 overflow-hidden bg-gradient-to-b from-[#faf7f2] to-[#f6f1ea]"
         >
-
-            {/* HUGE BACKGROUND WORD */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-
                 <span
-                    className="
-                        text-[42vw]
-                        md:text-[32vw]
-                        lg:text-[28vw]
-                        font-serif
-                        font-black
-                        tracking-[-0.08em]
-                        text-gold/[0.035]
-                        whitespace-nowrap
-                        select-none
-                        leading-none
-                    "
+                    className="text-[42vw] md:text-[32vw] lg:text-[28vw] font-serif font-black tracking-[-0.08em] text-gold/[0.035] whitespace-nowrap select-none leading-none"
                 >
                     ESSENCE
                 </span>
             </div>
 
-            {/* Fundo decorativo */}
             <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
                 <div
                     className="absolute inset-0"
                     style={{
-                        backgroundImage:
-                            'radial-gradient(#c5a059 1px, transparent 1px)',
+                        backgroundImage: 'radial-gradient(#c5a059 1px, transparent 1px)',
                         backgroundSize: '42px 42px',
                     }}
                 />
             </div>
 
-            {/* Blurs */}
             <div className="absolute top-0 left-0 w-[40rem] h-[40rem] bg-gold/10 blur-[140px] rounded-full" />
             <div className="absolute bottom-0 right-0 w-[35rem] h-[35rem] bg-[#d8c3b5]/20 blur-[120px] rounded-full" />
 
             <div className="container mx-auto px-6 relative z-10">
-
-                {/* HEADER */}
                 <div className="text-center max-w-4xl mx-auto mb-24">
-
                     <span className="text-[11px] uppercase tracking-[0.6em] font-black text-gold">
                         Nossa Filosofia
                     </span>
@@ -1016,9 +996,7 @@ const BenefitsSection = () => {
                     </p>
                 </div>
 
-                {/* CARDS */}
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-
                     {benefits.map((b, i) => (
                         <motion.div
                             key={i}
@@ -1027,60 +1005,36 @@ const BenefitsSection = () => {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.12 }}
                             whileHover={{ y: -10 }}
-                            className="
-                                relative
-                                rounded-[2.5rem]
-                                border border-gold/15
-                                bg-white/70
-                                backdrop-blur-xl
-                                p-10
-                                overflow-hidden
-                                shadow-[0_25px_70px_rgba(197,160,89,0.08)]
-                                hover:shadow-[0_35px_90px_rgba(197,160,89,0.16)]
-                                transition-all duration-700
-                                min-h-[420px]
-                                flex flex-col
-                                justify-between
-                            "
+                            className="relative rounded-[2.5rem] border border-gold/15 bg-white/70 backdrop-blur-xl p-10 overflow-hidden shadow-[0_25px_70px_rgba(197,160,89,0.08)] hover:shadow-[0_35px_90px_rgba(197,160,89,0.16)] transition-all duration-700 min-h-[420px] flex flex-col justify-between"
                         >
-
-                            {/* Glow */}
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-gold/10 blur-[70px]" />
 
                             <div className="relative z-10">
-
-                                {/* Número */}
                                 <div className="w-24 h-24 rounded-full bg-[#faf7f2] border border-gold/10 flex items-center justify-center mx-auto mb-10 shadow-inner">
-
                                     <span className="font-serif text-4xl text-gold font-bold">
                                         {b.number}
                                     </span>
                                 </div>
 
-                                {/* Ícone */}
                                 <div className="text-5xl text-gold text-center mb-10">
                                     {b.icon}
                                 </div>
 
-                                {/* Título */}
                                 <h3 className="text-3xl font-serif text-center text-luxury-black mb-6 leading-tight">
                                     {b.title}
                                 </h3>
 
-                                {/* Linha */}
                                 <div className="flex items-center justify-center gap-3 mb-8">
                                     <span className="w-16 h-px bg-gold/30" />
                                     <span className="text-gold text-xs">✦</span>
                                     <span className="w-16 h-px bg-gold/30" />
                                 </div>
 
-                                {/* Texto */}
                                 <p className="text-center text-luxury-black/50 leading-relaxed text-[15px]">
                                     {b.desc}
                                 </p>
                             </div>
 
-                            {/* Bottom Glow */}
                             <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-gold/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700" />
                         </motion.div>
                     ))}
@@ -1102,7 +1056,7 @@ const TestimonialsSection = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] font-serif font-black text-gold/5 select-none pointer-events-none">NOBLE</div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-24 max-w-3xl mx-auto">
+                <div className="text-center mb-14 max-w-3xl mx-auto">
                     <motion.span
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -1162,7 +1116,7 @@ const TeamSection = () => {
     return (
         <section id="equipe" className="py-32 bg-white relative overflow-hidden">
             {/* Cinematic Noise Texture Overlay */}
-            <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] mix-blend-overlay"
+            <div className="absolute inset-0 z-1 pointer-events-none opacity-[0.03] mix-blend-overlay"
                 style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
 
             {/* Editorial Decorative Elements */}
@@ -1170,7 +1124,7 @@ const TeamSection = () => {
             <div className="absolute top-1/2 left-0 -translate-y-1/2 text-[15vw] font-serif font-black text-gold/5 select-none pointer-events-none">EXPERT</div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col md:flex-row gap-16 mb-24 items-end">
+                <div className="flex flex-col md:flex-row gap-16 mb-14 items-end">
                     <div className="flex-1">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
@@ -1302,7 +1256,7 @@ const ConversionSection = () => {
                                     className="relative group/btn"
                                 >
                                     <div className="absolute -inset-4 bg-[#25D366]/20 blur-xl rounded-full opacity-0 group-hover/btn:opacity-100 transition-opacity" />
-                                    <div className="relative px-16 py-8 bg-linear-to-r from-[#25D366] to-[#128C7E] text-white text-lg font-black uppercase tracking-[0.3em] rounded-full premium-shadow flex items-center gap-5 transition-all duration-500 overflow-hidden">
+                                    <div className="relative px-12 py-6 bg-linear-to-r from-[#25D366] to-[#128C7E] text-white text-lg font-black uppercase tracking-[0.3em] rounded-full premium-shadow flex items-center gap-5 transition-all duration-500 overflow-hidden">
                                         <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000" />
                                         <MessageCircle fill="white" size={28} className="relative z-10" />
                                         <span className="relative z-10">Agendar via WhatsApp</span>
