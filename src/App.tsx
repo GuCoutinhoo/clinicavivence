@@ -404,7 +404,7 @@ const Hero = () => {
                   referrerPolicy="no-referrer"
                   src="https://i.postimg.cc/G2RG6TKR/hero-1.png" 
                   alt="Vivence Clinic" 
-                  className="w-full h-full object-cover grayscale-[0.05] group-hover:scale-105 transition-transform duration-[4000ms]"
+                  className="w-full h-full object-cover object-[65%_center] grayscale-[0.05] group-hover:scale-105 transition-transform duration-[4000ms]"
                 />
                 
                 <div className="absolute top-10 right-10 w-24 h-24 bg-white/10 backdrop-blur-2xl rounded-full border border-white/20 flex items-center justify-center animate-spin-slow">
