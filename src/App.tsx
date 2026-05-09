@@ -185,7 +185,9 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row items-center gap-6 mb-20">
             <a 
-              href="#contato" 
+              href="https://wa.me/5511999999999"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-14 py-7 bg-linear-to-r from-gold via-[#b38a4d] to-gold text-white text-[11px] font-black uppercase tracking-[0.4em] rounded-full hover:shadow-[0_25px_50px_-12px_rgba(197,160,89,0.6)] transition-all duration-500 flex items-center justify-center gap-4 group overflow-hidden relative shadow-[0_20px_40px_-15px_rgba(197,160,89,0.4)]"
             >
               <span className="relative z-10">Agendar Avaliação</span>
