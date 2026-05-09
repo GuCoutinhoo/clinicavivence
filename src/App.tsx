@@ -308,7 +308,7 @@ const Hero = () => {
                     transition={{ delay: 0.8 }}
                     className="text-[#cfa7a7] italic font-normal lg:text-[6.2rem] ml-2"
                     >
-                    Natural
+                    Natural.
                   </motion.span>
                 </div>
               </h1>
