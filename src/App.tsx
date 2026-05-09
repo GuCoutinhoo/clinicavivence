@@ -919,19 +919,19 @@ const BenefitsSection = () => {
     const benefits = [
         {
             number: '01',
-            icon: '◇',
+            icon: '✦',
             title: 'Excelência Curada',
             desc: 'Protocolos criados sob medida, respeitando a singularidade de cada traço e história.'
         },
         {
             number: '02',
-            icon: '◜◝',
+            icon: '◈',
             title: 'Visão Artística',
             desc: 'Mapeamento facial que une proporções áureas e técnica cirúrgica de precisão.'
         },
         {
             number: '03',
-            icon: '✦',
+            icon: '✧',
             title: 'Naturalidade Absoluta',
             desc: 'Resultados que preservam sua essência, revelando sua versão mais descansada e jovial.'
         },
@@ -944,69 +944,140 @@ const BenefitsSection = () => {
     ];
 
     return (
-        <section id="sobre" className="py-32 bg-[#fbf7f1] relative overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(197,160,89,0.12),transparent_35%),radial-gradient(circle_at_top_right,rgba(197,160,89,0.10),transparent_30%)]" />
+        <section
+            id="sobre"
+            className="relative py-32 overflow-hidden bg-gradient-to-b from-[#faf7f2] to-[#f6f1ea]"
+        >
+
+            {/* HUGE BACKGROUND WORD */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+                <span
+                    className="
+                        text-[22vw]
+                        md:text-[18vw]
+                        font-serif
+                        font-black
+                        tracking-[-0.08em]
+                        text-gold/[0.035]
+                        whitespace-nowrap
+                        select-none
+                        leading-none
+                    "
+                >
+                    ESSENCE
+                </span>
+            </div>
+
+            {/* Fundo decorativo */}
+            <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        backgroundImage:
+                            'radial-gradient(#c5a059 1px, transparent 1px)',
+                        backgroundSize: '42px 42px',
+                    }}
+                />
+            </div>
+
+            <div className="absolute top-0 left-0 w-[40rem] h-[40rem] bg-gold/10 blur-[140px] rounded-full" />
+            <div className="absolute bottom-0 right-0 w-[35rem] h-[35rem] bg-[#d8c3b5]/20 blur-[120px] rounded-full" />
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-20">
+
+                {/* HEADER */}
+                <div className="text-center max-w-4xl mx-auto mb-24">
+
                     <span className="text-[11px] uppercase tracking-[0.6em] font-black text-gold">
                         Nossa Filosofia
                     </span>
 
-                    <h2 className="text-5xl md:text-7xl font-serif mt-6 mb-6 text-luxury-black leading-tight">
-                        Beleza que respeita <br />
-                        <span className="italic text-gradient-gold">sua essência</span>
+                    <h2 className="mt-8 text-5xl md:text-7xl leading-[1.05] font-serif text-luxury-black">
+                        Beleza que respeita
+                        <br />
+                        <span className="italic text-gradient-gold">
+                            sua essência
+                        </span>
                     </h2>
 
-                    <div className="flex items-center justify-center gap-4 mb-8">
-                        <span className="w-20 h-px bg-gold/40" />
-                        <span className="text-gold text-xl">✦</span>
-                        <span className="w-20 h-px bg-gold/40" />
+                    <div className="flex items-center justify-center gap-4 mt-8 mb-8">
+                        <span className="w-20 h-px bg-gold/30" />
+                        <span className="text-gold">✦</span>
+                        <span className="w-20 h-px bg-gold/30" />
                     </div>
 
-                    <p className="max-w-2xl mx-auto text-luxury-black/50 text-lg leading-relaxed">
-                        Mais do que procedimentos, entregamos experiências transformadoras
-                        que realçam sua melhor versão com naturalidade e harmonia.
+                    <p className="text-lg text-luxury-black/50 leading-relaxed max-w-2xl mx-auto">
+                        Mais do que procedimentos, entregamos experiências
+                        transformadoras que realçam sua melhor versão com
+                        naturalidade e harmonia.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* CARDS */}
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+
                     {benefits.map((b, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: i * 0.12, duration: 0.7 }}
-                            className="group relative bg-white/55 backdrop-blur-xl border border-gold/25 rounded-[2rem] px-8 py-12 text-center shadow-[0_25px_70px_rgba(197,160,89,0.08)] hover:shadow-[0_35px_90px_rgba(197,160,89,0.16)] hover:-translate-y-3 transition-all duration-700 overflow-hidden"
+                            transition={{ delay: i * 0.12 }}
+                            whileHover={{ y: -10 }}
+                            className="
+                                relative
+                                rounded-[2.5rem]
+                                border border-gold/15
+                                bg-white/70
+                                backdrop-blur-xl
+                                p-10
+                                overflow-hidden
+                                shadow-[0_25px_70px_rgba(197,160,89,0.08)]
+                                hover:shadow-[0_35px_90px_rgba(197,160,89,0.16)]
+                                transition-all duration-700
+                                min-h-[420px]
+                                flex flex-col
+                                justify-between
+                            "
                         >
-                            <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-gold/5 opacity-80" />
+
+                            {/* Glow */}
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-gold/10 blur-[70px]" />
 
                             <div className="relative z-10">
-                                <div className="mx-auto mb-10 w-24 h-24 rounded-full bg-white shadow-[inset_0_8px_18px_rgba(197,160,89,0.08),0_15px_35px_rgba(0,0,0,0.06)] flex items-center justify-center border border-gold/10">
-                                    <span className="font-serif text-4xl font-black text-gold">
+
+                                {/* Número */}
+                                <div className="w-24 h-24 rounded-full bg-[#faf7f2] border border-gold/10 flex items-center justify-center mx-auto mb-10 shadow-inner">
+                                    <span className="font-serif text-4xl text-gold font-bold">
                                         {b.number}
                                     </span>
                                 </div>
 
-                                <div className="text-5xl text-gold mb-8 opacity-80 group-hover:scale-110 transition-transform duration-500">
+                                {/* Ícone */}
+                                <div className="text-5xl text-gold text-center mb-10">
                                     {b.icon}
                                 </div>
 
-                                <h4 className="font-serif text-2xl font-black text-luxury-black mb-6">
+                                {/* Título */}
+                                <h3 className="text-3xl font-serif text-center text-luxury-black mb-6 leading-tight">
                                     {b.title}
-                                </h4>
+                                </h3>
 
-                                <div className="flex items-center justify-center gap-3 mb-6">
-                                    <span className="w-16 h-px bg-gold/40" />
-                                    <span className="text-gold text-sm">✦</span>
-                                    <span className="w-16 h-px bg-gold/40" />
+                                {/* Linha */}
+                                <div className="flex items-center justify-center gap-3 mb-8">
+                                    <span className="w-16 h-px bg-gold/30" />
+                                    <span className="text-gold text-xs">✦</span>
+                                    <span className="w-16 h-px bg-gold/30" />
                                 </div>
 
-                                <p className="text-sm text-luxury-black/50 leading-relaxed">
+                                {/* Texto */}
+                                <p className="text-center text-luxury-black/50 leading-relaxed text-[15px]">
                                     {b.desc}
                                 </p>
                             </div>
+
+                            {/* Bottom Glow */}
+                            <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-gold/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-700" />
                         </motion.div>
                     ))}
                 </div>
