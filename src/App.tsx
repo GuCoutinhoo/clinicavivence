@@ -81,7 +81,9 @@ const Header = () => {
 
         <div className="flex items-center gap-6">
           <a 
-            href="#contato" 
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center px-8 py-3 bg-luxury-black text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-gold transition-all duration-500 premium-shadow group relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
