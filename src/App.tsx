@@ -405,75 +405,75 @@ const Hero = () => {
 
                     <motion.div
                         initial={{ opacity: 0, x: 60 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-                                className="lg:col-span-5 relative"
-                            >
-                                <div className="relative z-10 group">
-                                    <motion.div
-                                        animate={{ rotate: 360 }}
-                                        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                                        className="absolute inset-[-60px] border border-gold/10 rounded-full -z-10"
-                                    />
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+                        className="lg:col-span-5 relative"
+                    >
+                        <div className="relative z-10 group">
+                            <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                                className="absolute inset-[-60px] border border-gold/10 rounded-full -z-10"
+                            />
 
-                                    <div className="relative rounded-[5rem] overflow-hidden aspect-[4/5.5] shadow-[0_60px_120px_-20px_rgba(197,160,89,0.2)] border-[15px] border-white backdrop-blur-3xl">
-                                        <motion.img
-                                            initial={{ scale: 1.15 }}
-                                            animate={{ scale: 1 }}
-                                            transition={{ duration: 2.5 }}
-                                            referrerPolicy="no-referrer"
-                                            src="https://i.postimg.cc/G2RG6TKR/hero-1.png"
-                                            alt="Vivence Clinic"
-                                            className="w-full h-full object-cover object-[65%_center] grayscale-[0.05] group-hover:scale-105 transition-transform duration-[4000ms]"
-                                        />
+                            <div className="relative rounded-[5rem] overflow-hidden aspect-[4/5.5] shadow-[0_60px_120px_-20px_rgba(197,160,89,0.2)] border-[15px] border-white backdrop-blur-3xl">
+                                <motion.img
+                                    initial={{ scale: 1.15 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ duration: 2.5 }}
+                                    referrerPolicy="no-referrer"
+                                    src="https://i.postimg.cc/G2RG6TKR/hero-1.png"
+                                    alt="Vivence Clinic"
+                                    className="w-full h-full object-cover object-[65%_center] grayscale-[0.05] group-hover:scale-105 transition-transform duration-[4000ms]"
+                                />
 
-                                        <div className="absolute top-10 right-10 w-24 h-24 bg-white/10 backdrop-blur-2xl rounded-full border border-white/20 flex items-center justify-center animate-spin-slow">
-                                            <div className="text-white text-[8px] font-black tracking-widest text-center">
-                                                BELEZA<br />REAL<br />EST. 2017
-                                            </div>
-                                        </div>
-
-                                        <div className="absolute bottom-12 left-8 right-8 p-10 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[3.5rem] shadow-2xl">
-                                            <div className="flex items-center gap-6">
-                                                <div className="w-16 h-16 bg-gold/20 rounded-3xl flex items-center justify-center text-gold border border-gold/20">
-                                                    <Sparkles size={32} />
-                                                </div>
-                                                <div>
-                                                    <p className="text-[10px] uppercase font-black tracking-[0.3em] text-white/80 mb-1">Tecnologia 2024</p>
-                                                    <p className="font-serif text-2xl text-white font-medium">Inovação Estética</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div className="absolute top-10 right-10 w-24 h-24 bg-white/10 backdrop-blur-2xl rounded-full border border-white/20 flex items-center justify-center animate-spin-slow">
+                                    <div className="text-white text-[8px] font-black tracking-widest text-center">
+                                        BELEZA<br />REAL<br />EST. 2017
                                     </div>
                                 </div>
 
-                                <motion.div
-                                    animate={{ y: [0, -25, 0], x: [0, 10, 0] }}
-                                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                                    className="absolute -top-16 -right-16 z-20"
-                                >
-                                    <div className="bg-white/95 backdrop-blur-xl shadow-2xl px-12 py-10 rounded-[3.5rem] border border-gold/10 flex flex-col items-center">
-                                        <div className="w-16 h-16 bg-gold/10 rounded-3xl flex items-center justify-center text-gold mb-4">
-                                            <ShieldCheck size={36} />
+                                <div className="absolute bottom-12 left-8 right-8 p-10 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[3.5rem] shadow-2xl">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 bg-gold/20 rounded-3xl flex items-center justify-center text-gold border border-gold/20">
+                                            <Sparkles size={32} />
                                         </div>
-                                        <p className="text-[9px] uppercase font-black tracking-[0.5em] text-luxury-black/30 mb-1">Certificação</p>
-                                        <p className="font-serif font-black text-2xl text-luxury-black">ISO 9001</p>
+                                        <div>
+                                            <p className="text-[10px] uppercase font-black tracking-[0.3em] text-white/80 mb-1">Tecnologia 2024</p>
+                                            <p className="font-serif text-2xl text-white font-medium">Inovação Estética</p>
+                                        </div>
                                     </div>
-                                </motion.div>
+                                </div>
+                            </div>
+                        </div>
 
-                                <motion.div
-                                    animate={{ y: [0, 25, 0], x: [0, -10, 0] }}
-                                    transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                    className="absolute -bottom-12 -left-16 z-20"
-                                >
-                                    <div className="bg-luxury-black shadow-[0_40px_80px_rgba(0,0,0,0.4)] px-12 py-8 rounded-[3.5rem] border border-white/10 flex items-center gap-6 group">
-                                        <div className="flex gap-1 text-gold">
-                                            {[1, 2, 3, 4, 5].map(i => <Star key={i} size={10} fill="currentColor" />)}
-                                        </div>
-                                        <div className="h-10 w-px bg-white/20" />
-                                        <p className="text-white text-sm font-bold tracking-tight">Elite Patient <br /><span className="text-white/40 text-[9px] font-normal uppercase tracking-[0.2em] mt-1 inline-block">Experience</span></p>
-                                    </div>
-                                </motion.div>
+                        <motion.div
+                            animate={{ y: [0, -25, 0], x: [0, 10, 0] }}
+                            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute -top-16 -right-16 z-20"
+                        >
+                            <div className="bg-white/95 backdrop-blur-xl shadow-2xl px-12 py-10 rounded-[3.5rem] border border-gold/10 flex flex-col items-center">
+                                <div className="w-16 h-16 bg-gold/10 rounded-3xl flex items-center justify-center text-gold mb-4">
+                                    <ShieldCheck size={36} />
+                                </div>
+                                <p className="text-[9px] uppercase font-black tracking-[0.5em] text-luxury-black/30 mb-1">Certificação</p>
+                                <p className="font-serif font-black text-2xl text-luxury-black">ISO 9001</p>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            animate={{ y: [0, 25, 0], x: [0, -10, 0] }}
+                            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                            className="absolute -bottom-12 -left-16 z-20"
+                        >
+                            <div className="bg-luxury-black shadow-[0_40px_80px_rgba(0,0,0,0.4)] px-12 py-8 rounded-[3.5rem] border border-white/10 flex items-center gap-6 group">
+                                <div className="flex gap-1 text-gold">
+                                    {[1, 2, 3, 4, 5].map(i => <Star key={i} size={10} fill="currentColor" />)}
+                                </div>
+                                <div className="h-10 w-px bg-white/20" />
+                                <p className="text-white text-sm font-bold tracking-tight">Elite Patient <br /><span className="text-white/40 text-[9px] font-normal uppercase tracking-[0.2em] mt-1 inline-block">Experience</span></p>
+                            </div>
+                        </motion.div>
                     </motion.div>
                 </div>
             </div>
@@ -917,31 +917,96 @@ const ExperienceSection = () => {
 
 const BenefitsSection = () => {
     const benefits = [
-        { title: 'Excelência Curada', desc: 'Protocolos criados sob medida, respeitando a singularidade de cada traço e história.' },
-        { title: 'Visão Artística', desc: 'Mapeamento facial que une proporções áureas e técnica cirúrgica de precisão.' },
-        { title: 'Naturalidade Absoluta', desc: 'Resultados que preservam sua essência, revelando sua versão mais descansada e jovial.' },
-        { title: 'Mãos Especialistas', desc: 'Inovações trazidas diretamente dos maiores congressos de estética de Mônaco e Paris.' },
+        {
+            number: '01',
+            icon: '◇',
+            title: 'Excelência Curada',
+            desc: 'Protocolos criados sob medida, respeitando a singularidade de cada traço e história.'
+        },
+        {
+            number: '02',
+            icon: '◜◝',
+            title: 'Visão Artística',
+            desc: 'Mapeamento facial que une proporções áureas e técnica cirúrgica de precisão.'
+        },
+        {
+            number: '03',
+            icon: '✦',
+            title: 'Naturalidade Absoluta',
+            desc: 'Resultados que preservam sua essência, revelando sua versão mais descansada e jovial.'
+        },
+        {
+            number: '04',
+            icon: '★',
+            title: 'Mãos Especialistas',
+            desc: 'Inovações trazidas diretamente dos maiores congressos de estética de Mônaco e Paris.'
+        },
     ];
 
     return (
-        <section id="sobre" className="py-32 bg-white relative overflow-hidden">
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <section id="sobre" className="py-32 bg-[#fbf7f1] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(197,160,89,0.12),transparent_35%),radial-gradient(circle_at_top_right,rgba(197,160,89,0.10),transparent_30%)]" />
+
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="text-center mb-20">
+                    <span className="text-[11px] uppercase tracking-[0.6em] font-black text-gold">
+                        Nossa Filosofia
+                    </span>
+
+                    <h2 className="text-5xl md:text-7xl font-serif mt-6 mb-6 text-luxury-black leading-tight">
+                        Beleza que respeita <br />
+                        <span className="italic text-gradient-gold">sua essência</span>
+                    </h2>
+
+                    <div className="flex items-center justify-center gap-4 mb-8">
+                        <span className="w-20 h-px bg-gold/40" />
+                        <span className="text-gold text-xl">✦</span>
+                        <span className="w-20 h-px bg-gold/40" />
+                    </div>
+
+                    <p className="max-w-2xl mx-auto text-luxury-black/50 text-lg leading-relaxed">
+                        Mais do que procedimentos, entregamos experiências transformadoras
+                        que realçam sua melhor versão com naturalidade e harmonia.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {benefits.map((b, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
-                            className="group"
+                            transition={{ delay: i * 0.12, duration: 0.7 }}
+                            className="group relative bg-white/55 backdrop-blur-xl border border-gold/25 rounded-[2rem] px-8 py-12 text-center shadow-[0_25px_70px_rgba(197,160,89,0.08)] hover:shadow-[0_35px_90px_rgba(197,160,89,0.16)] hover:-translate-y-3 transition-all duration-700 overflow-hidden"
                         >
-                            <div className="mb-8 overflow-hidden">
-                                <span className="text-4xl font-serif text-gold/20 font-black group-hover:text-gold transition-colors duration-500">0{i + 1}</span>
-                                <div className="w-12 h-0.5 bg-gold/30 mt-2 group-hover:w-full transition-all duration-700" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-gold/5 opacity-80" />
+
+                            <div className="relative z-10">
+                                <div className="mx-auto mb-10 w-24 h-24 rounded-full bg-white shadow-[inset_0_8px_18px_rgba(197,160,89,0.08),0_15px_35px_rgba(0,0,0,0.06)] flex items-center justify-center border border-gold/10">
+                                    <span className="font-serif text-4xl font-black text-gold">
+                                        {b.number}
+                                    </span>
+                                </div>
+
+                                <div className="text-5xl text-gold mb-8 opacity-80 group-hover:scale-110 transition-transform duration-500">
+                                    {b.icon}
+                                </div>
+
+                                <h4 className="font-serif text-2xl font-black text-luxury-black mb-6">
+                                    {b.title}
+                                </h4>
+
+                                <div className="flex items-center justify-center gap-3 mb-6">
+                                    <span className="w-16 h-px bg-gold/40" />
+                                    <span className="text-gold text-sm">✦</span>
+                                    <span className="w-16 h-px bg-gold/40" />
+                                </div>
+
+                                <p className="text-sm text-luxury-black/50 leading-relaxed">
+                                    {b.desc}
+                                </p>
                             </div>
-                            <h4 className="font-serif text-2xl font-black text-luxury-black mb-4">{b.title}</h4>
-                            <p className="text-sm text-luxury-black/40 leading-relaxed font-light">{b.desc}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -1022,7 +1087,7 @@ const TeamSection = () => {
     return (
         <section id="equipe" className="py-32 bg-white relative overflow-hidden">
             {/* Cinematic Noise Texture Overlay */}
-            <div className="absolute inset-0 z-1 pointer-events-none opacity-[0.03] mix-blend-overlay"
+            <div className="absolute inset-0 z-[1] pointer-events-none opacity-[0.03] mix-blend-overlay"
                 style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
 
             {/* Editorial Decorative Elements */}
